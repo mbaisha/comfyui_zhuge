@@ -69,18 +69,21 @@
 - **可视化反馈**: 实时显示处理状态
 - **一键重置**: 方便重新开始处理
 
-详细解释 auto_loop 和 reset 参数的作用：
-auto_loop (自动循环)
-作用：控制当处理完所有文本行后的行为
+## 详细解释 auto_loop 和 reset 参数的作用：
+### auto_loop (自动循环)
+- **作用**：控制当处理完所有文本行后的行为
 
-当 auto_loop = False (默认值)：
+### 当 auto_loop = False (默认值)：
 节点会从第一行开始处理，逐行输出
 到达最后一行后，has_more 会变为 False
 索引会停留在末尾，不会自动回到开头
 用途：一次性处理所有行，处理完成后停止
 
-当 auto_loop = True：
+### 当 auto_loop = True：
 节点会从第一行开始处理，逐行输出
 到达最后一行后，索引会自动重置为0（回到第一行）
 has_more 会一直保持为 True（只要有内容）
 用途：无限循环处理，适合需要反复处理相同内容的场景
+
+<img width="1438" height="687" alt="工作流" src="https://github.com/user-attachments/assets/83589e7d-7c2b-401f-a21e-de91ab6a7424" />
+
