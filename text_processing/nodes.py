@@ -45,7 +45,7 @@ class ZhugeTextSplitter:
     def INPUT_TYPES(cls):
         return {
             "required": {
-                "text": ("STRING", {"multiline": True, "default": "你好\n我好\n大家好"}),
+                "text": ("STRING", {"multiline": True, "default": ""}),
                 "split_char": ("STRING", {"default": "\\n"}),
                 "start_index": ("INT", {"default": 0, "min": -100, "max": 100}),
                 "end_index": ("INT", {"default": -1, "min": -100, "max": 100}),
@@ -141,7 +141,7 @@ class ZhugeTextSplitInfo:
     def INPUT_TYPES(cls):
         return {
             "required": {
-                "text": ("STRING", {"multiline": True, "default": "你好\n我好\n大家好"}),
+                "text": ("STRING", {"multiline": True, "default": ""}),
                 "split_char": ("STRING", {"default": "\\n"}),
             }
         }
